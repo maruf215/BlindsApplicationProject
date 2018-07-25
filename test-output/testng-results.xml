@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17266" started-at="2018-07-25T04:48:28Z" finished-at="2018-07-25T04:48:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17266" started-at="2018-07-25T04:48:28Z" finished-at="2018-07-25T04:48:45Z">
+      <class name="com.blind.test.SmokeTest">
+        <test-method status="PASS" signature="browserInitialization()[pri:0, instance:com.blind.test.SmokeTest@6e06451e]" name="browserInitialization" is-config="true" duration-ms="12160" started-at="2018-07-25T04:48:28Z" finished-at="2018-07-25T04:48:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method status="PASS" signature="SearchTest()[pri:0, instance:com.blind.test.SmokeTest@6e06451e]" name="SearchTest" duration-ms="3932" started-at="2018-07-25T04:48:40Z" finished-at="2018-07-25T04:48:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.blind.test.SmokeTest@6e06451e]" name="tearDown" is-config="true" duration-ms="1142" started-at="2018-07-25T04:48:44Z" finished-at="2018-07-25T04:48:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.blind.test.SmokeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
