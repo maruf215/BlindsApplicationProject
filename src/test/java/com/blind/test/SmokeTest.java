@@ -8,7 +8,7 @@ import com.blind.common.TestBase;
 import com.blinds.pages.BlindHomePage;
 
 public class SmokeTest extends TestBase {
-// 	TestBase tBase;
+
 	BlindHomePage bHomePage;
 
 	@Test
