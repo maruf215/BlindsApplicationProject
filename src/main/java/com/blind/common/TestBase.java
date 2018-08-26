@@ -27,9 +27,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			String dir = System.getProperty("user.dir");
-			fis = new FileInputStream(dir + "/src/main/java/com/blind/config/config.properties");
-//			fis = new FileInputStream(
-//					"/Users/mohammadsikder/eclipse-workspace/BlindsApplicationProject/src/main/java/com/blind/config/config.properties");
+			fis = new FileInputStream(dir + "/src/main/java/com/blind/config/config.properties");;
 			prop.load(fis);
 			log.info("========file uploaded!!!!!!===============");
 		} catch (FileNotFoundException e) {
@@ -41,12 +39,11 @@ public class TestBase {
 		String browsername = prop.getProperty("browser");
 		if (browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
-			// System.setProperty("webdriver.chrome.driver",
-			// "/Users/mohammadsikder/Downloads/chromedriver");
+		
 			driver = new ChromeDriver();
 			log.info("===== " + browsername + " is opened!!!");
 		} else if (browsername.equalsIgnoreCase("FF")) {
-			System.setProperty("webdriver.gecko.driver", "/Users/mohammadsikder/Downloads/geckodriver");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver");
 			driver = new FirefoxDriver();
 			log.info(browsername + " is opened!!!");
 		}
@@ -59,7 +56,7 @@ public class TestBase {
 
 	@AfterMethod
 	public void tearDown() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		driver.quit();
 	}
 
