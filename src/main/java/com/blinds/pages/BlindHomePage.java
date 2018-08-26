@@ -45,13 +45,11 @@ public class BlindHomePage extends TestBase {
 
 	public ArrayList<Float> allBLindPriceList() {
 
-		driver.findElement(By.xpath("//input[@name='q' and @id='gcc-inline-search']")).sendKeys("Blinds");
-		driver.findElement(By.xpath("//button[@title='Search']")).click();
+		driver.findElement(By.xpath("//input[@id='gcc-typeahead-input']")).sendKeys("Blinds");
+		driver.findElement(By.xpath("//button[@id='gcc-typeahead-submit']")).click();
 
 		List<WebElement> allPrice = driver.findElements(
 				By.xpath("//*[@id=\"gcc-search-results-list\"]/div/article/div/div/div[2]/div[1]/div[2]/div/div/span"));
-
-		// int totalBlindsWithPrice = allPrice.size();
 
 		ArrayList<Float> al = new ArrayList<Float>();
 		int i;
@@ -61,13 +59,8 @@ public class BlindHomePage extends TestBase {
 			try {
 				String myPrice = allPrice.get(i).getText();
 
-				// System.out.println("myPrice: " + myPrice);
-
 				String s = myPrice.replace("$", "");
-				// System.out.println("s: " + s);
-
 				Float d = Float.parseFloat(s);
-
 				al.add(d);
 
 			}
