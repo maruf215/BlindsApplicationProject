@@ -13,7 +13,7 @@ public class SmokeTest extends TestBase {
 
 	@Test
 	public void SearchTest() throws IOException {
-		
+
 		bHomePage = new BlindHomePage(driver);
 		bHomePage.openBlindHomePageAndVerifyTitle();
 		bHomePage.searchBlindPriceFromLowToHigh();
